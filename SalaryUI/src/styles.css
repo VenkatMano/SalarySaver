@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import '@angular/material/prebuilt-themes/purple-green.css';
+html, body { height: 100%; }
+body, h2, .sal-anchor { margin: 0; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji}
+.sal-anchor {
+    color: white !important;    
+}
+
+.sal-anchor  :hover{
+    color: skyblue !important;    
+}
+
+.sal-anchor :visited{
+    color: lightgreen !important;
+}
