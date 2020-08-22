@@ -300,10 +300,7 @@
   <h2 style="margin-left: 20px;">{{title}}</h2>
   <span style="margin-left: 5%;"></span>
   <div *ngFor="let toolTitle of toolBarTitles">
-    <a class = "sal-anchor" href="/" mat-button >{{toolTitle}}</a>
-    <!-- <a class = "sal-anchor" href="/" mat-button>Add Salary</a>
-    <a class = "sal-anchor" href="/" mat-button>View Statistics</a>
-    <a class = "sal-anchor" href="/" mat-button>Calculate PF</a> -->
-  </div>  
+    <a class = "sal-anchor"  mat-button routerLink={{toolTitle.routerUrl}}>{{toolTitle.title}}</a>         
+  </div>
 </div>
 <router-outlet></router-outlet>

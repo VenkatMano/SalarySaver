@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { CommonserviceService } from 'src/services/commonservice.service';
+import { ToolBarTitleRouter } from './ToolBarTitleRouter';
 
 
 
@@ -13,7 +14,7 @@ export class AppComponent implements OnInit {
 
   title = 'Salary Saver';
 
-  toolBarTitles: string[] = [];
+  toolBarTitles: ToolBarTitleRouter[] = [];
 
   data:any;
 
@@ -22,10 +23,10 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.data = this.commonService.getToolBarFromConfig();
+    this.data = this.commonService.getToolBarFromConfig();    
     //toolBartitles from json
-    this.data.titles.forEach(element => {
+    this.data.titlesAndRouter.forEach(element => {      
       this.toolBarTitles.push(element);
-    });        
+    });
   }
 }

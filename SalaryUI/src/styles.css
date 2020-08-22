@@ -2,7 +2,7 @@
 
 @import '@angular/material/prebuilt-themes/purple-green.css';
 html, body { height: 100%; }
-body, h2, .sal-anchor { margin: 0; font-family: apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji}
+body, h2, .sal-anchor { margin: 0px; font-family: Source sans pro}
 .sal-anchor {
     color: white !important;    
 }
@@ -13,4 +13,71 @@ body, h2, .sal-anchor { margin: 0; font-family: apple-system,BlinkMacSystemFont,
 
 .sal-anchor :visited{
     color: lightgreen !important;
+}
+
+.txt-normal {
+    font-family: Source sans pro;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 27px;
+    color: #1e314f;
+    font-weight: 500;
+    margin-left: 3%;
+}
+
+h1 {
+    font-family: Source sans pro;
+    margin-left: 1%;
+}
+
+.component-parent {
+    width: 100%;
+    height: 100%;
+}
+
+.sal-pfbar {    
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.card-container {    
+    background-color: wheat;
+    font-family: Source sans pro;
+    color: black
+}
+
+.sal-pfbar_input {
+    margin-top: 1%;
+    height: 100%;    
+}
+
+label {
+    color: red;
+}
+
+input:read-only {
+    background-color: lightgrey;
+}
+
+input {
+    height: 25px;
+}
+
+.mat-button-base {
+    margin-left: 50%;
+}
+
+.sal-pfbar_result {
+
+  margin-top: 1%;
+  background-color:yellow ;
+  padding: 10px ;
+  border: 1px ridge navy ;
+  font-style: italic;
+  font-size: large;
+  box-shadow:1px 1px 2px wheat, 0 0 25px greenyellow, 0 0 25px thistle;
+}
+
+.sal-pfbar_result label {
+    color: black;
 }

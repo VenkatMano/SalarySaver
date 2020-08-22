@@ -1,0 +1,103 @@
+<div class="component-parent" style="overflow: visible;">
+<div>
+        <div class="mat-subheading">
+            <h1>What is EPF</h1>
+        </div>
+        <div>
+            <p class="txt-normal">
+                While government employees enjoy the social security of availing pension, people working in private companies do not have this option. An Employee Provident Fund is a retirement benefit scheme that is meant for all salaried employees. The Employees Provident Fund Organization of India (EFPO) maintains and oversees the EPF. All companies that have more than 20 employees are mandated by law to register with the EFPO. The EPF works as a savings scheme for employees where a fraction of their salary every month is saved. This fund can be availed when you retire or when you are unable to work. This scheme can put your mind at ease as you will not need to depend on anyone for your expenses when you no longer work.
+            </p>
+        </div>  
+        <div class="mat-subheading">
+            <h1>Benifits of EPF</h1>
+        </div>
+        <div class="txt-normal">
+            <p>
+                1) You can nominate a family member as your nominee, so that they can avail the pension or the corpus in the event of your demise
+            </p>
+        </div>
+        <div class="txt-normal">
+            <p>
+                2) You get a fixed income once you retire, without having to work
+            </p>
+        </div>  
+        <div class="txt-normal">
+            <p>
+                3) EPF allows you to invest more than the basic 12% of your salary every month under the provision of Volunteer provident fund
+            </p>
+        </div>  
+        <div class="txt-normal">
+            <p>
+                4) You also get life insurance cover under EPF
+            </p>
+        </div>  
+        <div class="txt-normal">
+            <p>
+                5) EPF is not mandatory, though it is strongly recommended that you join
+            </p>
+        </div>  
+        <div class="txt-normal">
+            <p>
+                6) When you withdraw EPF (after 60), you can avail both EPS and EPF
+            </p>
+        </div>  
+        <div class="txt-normal">
+            <p>
+                7) You can withdraw early in case of an emergency under certain defined circumstances like job loss, wedding, loan repayment etc
+            </p>
+        </div>  
+        <div  class="txt-normal">
+            <p>
+                8) There is no need to withdraw or open a new EPF as you can link the old one and the new one
+            </p>
+        </div>             
+</div>
+<div class="sal-pfbar">
+    <mat-card class="card-container">
+        <mat-card-header>
+            <mat-card-title>
+                <p>Calculate PF's here</p>
+            </mat-card-title>
+        </mat-card-header>
+        <mat-card-content >            
+                <div class="sal-pfbar_input" (change)="validateInput()">
+                    <label> Enter Salary (Basic+DA) (Maximum is 15,000)</label>
+                    <input matInput type="number" style="width: 100%;"min="0" max="15000"  [(ngModel)]="calculateInput.basicSalary" />  
+                    <div >
+                        <label  [hidden]="errorOnSalary" class="salaryErrorMessage" style="color: blue;">{{errorOnSalaryMessage}}</label>
+                    </div>                
+                </div>
+                <div class="sal-pfbar_input">
+                    <label> Current Age </label>
+                    <input  type="number"  min="21"  max="57"   style="width: 100%;" [(ngModel)]="calculateInput.currentAge"/>
+                </div>
+                <div class="sal-pfbar_input">
+                <label> Your Contribution To EPF (Min 12%) </label>
+                <input  type="number" style="width: 100%;" [(ngModel)]="calculateInput.yourContribution" readonly/>
+                </div>
+                <div class="sal-pfbar_input">
+                <label> Your Employer's Contribution To EPF (Max 3.67) </label>
+                <input  type="number" style="width: 100%;" value="{{calculateInput.employerContribution}}" readonly/>
+                </div>
+                <div class="sal-pfbar_input">
+                <label> Retirement Age (Maximum Age Is 58)) </label>
+                <input  type="number" style="width: 100%;" [(ngModel)] = "calculateInput.retirementAge"/>
+                </div>
+                <div class="sal-pfbar_input">
+                <label> Current EPF Balance </label>
+                <input  type="number" style="width: 100%;" [(ngModel)]="calculateInput.currentBalance"/>
+                </div>
+                <div class="sal-pfbar_input">
+                <label> Current Interest Rate </label>
+                <input  type="number" style="width: 100%;" value="{{calculateInput.currentInterestRate}}" readonly/>
+                </div>
+                <div class="sal-pfbar_input">
+                    <button class="sal-submit" mat-raised-button (click)="calculatePf()">Submit</button>
+                </div>
+                <div class="sal-pfbar_result">
+                    <label> Your pf at the time of retirement is {{calculateOutput.fundAvailableAfterRetirement}} </label>
+                </div>
+        </mat-card-content>          
+    </mat-card>
+</div>
+</div>

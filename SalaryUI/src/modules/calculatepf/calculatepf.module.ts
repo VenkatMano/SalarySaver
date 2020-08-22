@@ -1,12 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { CalculateComponent } from './calculate/calculate.component';
+import { CalculatepfModuleRoutingModule } from './calculatepf-routing.module';
+import { RouterModule } from '@angular/router';
+import { MatCardModule, MatInputModule, MatButton, MatButtonModule } from '@angular/material';
+import { FormsModule } from '@angular/forms';
 
 
 
 @NgModule({
-  declarations: [],
+  declarations: [CalculateComponent],
   imports: [
-    CommonModule
-  ]
+    CommonModule,
+    CalculatepfModuleRoutingModule,
+    RouterModule,
+    MatCardModule,
+    MatInputModule,
+    MatButtonModule,
+    FormsModule
+  ],
+  bootstrap:[CalculateComponent]
 })
 export class CalculatepfModule { }

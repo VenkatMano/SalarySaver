@@ -1,10 +1,25 @@
 {
     "toolBar":{
-        "titles":[
-            "Whats New",
-            "Add Salary",
-            "View Statistics",
-            "Calculate PFs"
+        "titlesAndRouter":[
+            {
+                "title": "Whats New",
+                "routerUrl": "new"
+            },
+            {
+                "title": "Add Salary",
+                "routerUrl": "add"
+            },
+            {
+                "title": "View Statistics",
+                "routerUrl": "view"
+            },
+            {
+                "title": "Calculate Pfs",
+                "routerUrl": "calculate"
+            }
         ]
+    },
+    "restUrls":{
+        "calculatePfUrl": "http://localhost:9404/calculater-service/calculatePf"
     }
 }
