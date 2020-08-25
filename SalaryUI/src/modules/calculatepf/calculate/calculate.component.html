@@ -69,7 +69,10 @@
                 </div>
                 <div class="sal-pfbar_input">
                     <label> Current Age </label>
-                    <input  type="number"  min="21"  max="57"   style="width: 100%;" [(ngModel)]="calculateInput.currentAge"/>
+                    <mat-slider  class="sal-pfbar_slider" thumbLabel
+                    [displayWith]="formatLabel"
+                    tickInterval="auto"  min="21" max="57" [(value)]="calculateInput.currentAge"></mat-slider>
+                    <!-- <input  type="number"  min="21"  max="57"   style="width: 100%;" [(ngModel)]="calculateInput.currentAge"/> -->
                 </div>
                 <div class="sal-pfbar_input">
                 <label> Your Contribution To EPF (Min 12%) </label>

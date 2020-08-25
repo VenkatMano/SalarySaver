@@ -81,3 +81,16 @@ input {
 .sal-pfbar_result label {
     color: black;
 }
+
+.sal-pfbar_slider {
+    color: red;
+    width: 90%;
+}
+
+.sal-pfbar_slider > :not(p){
+    background-color: red;    
+}
+
+.mat-slider-thumb-container > :not(p) {
+    background-color: red;    
+}

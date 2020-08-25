@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { CalculateComponent } from './calculate/calculate.component';
 import { CalculatepfModuleRoutingModule } from './calculatepf-routing.module';
 import { RouterModule } from '@angular/router';
-import { MatCardModule, MatInputModule, MatButton, MatButtonModule } from '@angular/material';
+import { MatCardModule, MatInputModule, MatButton, MatButtonModule, MatSliderModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
 
 
@@ -17,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     MatCardModule,
     MatInputModule,
     MatButtonModule,
-    FormsModule
+    FormsModule,
+    MatSliderModule
   ],
   bootstrap:[CalculateComponent]
 })
